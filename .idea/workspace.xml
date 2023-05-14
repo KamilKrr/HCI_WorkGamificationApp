@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4610ace4-afff-4d7b-8522-b0b0dac11eb4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sceens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sceens/HomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TrophyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrophyView.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/trophySlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/trophySlice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
