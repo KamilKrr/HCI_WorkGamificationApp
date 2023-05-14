@@ -7,11 +7,8 @@
     <list default="true" id="4610ace4-afff-4d7b-8522-b0b0dac11eb4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TrophyView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TrophyView.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sceens/HomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sceens/HomeScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +70,13 @@
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

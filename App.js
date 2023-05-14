@@ -19,7 +19,7 @@ export default function App() {
       <Provider store={store}>
         <NavigationContainer initialRouteName="Home" theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
           <Tab.Navigator screenOptions={{
-            showIcon: true
+            showIcon: true,
           }}>
             <Tab.Screen name="Home" component={HomeScreen} options={{
               tabBarLabel: 'Home',

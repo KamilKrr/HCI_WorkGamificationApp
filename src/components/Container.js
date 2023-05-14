@@ -4,7 +4,7 @@ import {ThemeContext} from "../context/ThemeContext";
 
 const Container = ({ children }) => {
   return (
-    <View className="flex-1 items-center justify-center bg-white dark:bg-zinc-900">
+    <View className="p-3">
       {children}
     </View>
   );
