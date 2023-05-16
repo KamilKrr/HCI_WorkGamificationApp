@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {StyleSheet, View, Text, Button} from 'react-native';
 import AppButton from '../components/AppButton';
 import AppText from "../components/AppText";
 import { useNavigation } from '@react-navigation/native';
+import CenteredContainer from "../components/CenteredContainer";
 
 const WelcomeScreen = () =>{
     const navigation = useNavigation();
@@ -30,26 +30,14 @@ const WelcomeScreen = () =>{
         };
     }, []);
 
-
-
-    return(<View style={styles.container}>
-        <AppText style ={styles.text}>{text}</AppText>
+    return(
+      <CenteredContainer>
+        <AppText>{text}</AppText>
             {isTextComplete && (
                 <AppButton title="Continue" onPress={()=> navigation.navigate('TabNavigator')} />
             )}
-    </View>
-);
+        </CenteredContainer>
+    );
 };
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    text: {
-        textAlign: 'center',
-        fontSize: 20,
-    },
-});
 
 export default WelcomeScreen;

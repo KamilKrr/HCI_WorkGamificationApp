@@ -20,10 +20,10 @@ export default function App() {
   return (
     <ThemeContextProvider>
       <Provider store={store}>
-        <NavigationContainer initialRouteName="WelcomeScreen" theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <NavigationContainer initialRouteName="Welcome" theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
           <Stack.Navigator>
             <Stack.Screen
-                name="WelcomeScreen"
+                name="Welcome"
                 component={WelcomeScreen}
                 options={{ headerShown: false }}
             />
