@@ -3,6 +3,7 @@ import { Provider } from 'react-redux'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
+import WelcomeScreen from "./src/sceens/WelcomeScreen";
 import HomeScreen from "./src/sceens/HomeScreen";
 import TrophiesScreen from "./src/sceens/TrophiesScreen";
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -19,8 +20,13 @@ export default function App() {
   return (
     <ThemeContextProvider>
       <Provider store={store}>
-        <NavigationContainer initialRouteName="Home" theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+        <NavigationContainer initialRouteName="WelcomeScreen" theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
           <Stack.Navigator>
+            <Stack.Screen
+                name="WelcomeScreen"
+                component={WelcomeScreen}
+                options={{ headerShown: false }}
+            />
             <Stack.Screen
               name="TabNavigator"
               component={TabNavigator}
