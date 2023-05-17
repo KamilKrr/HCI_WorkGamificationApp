@@ -4,37 +4,17 @@ import AppText from "../components/AppText";
 import { useNavigation } from '@react-navigation/native';
 import CenteredContainer from "../components/CenteredContainer";
 import FullHeightContainer from "../components/FullHeightContainer";
+import AnimatedText from "../components/AnimatedText";
 
 const WelcomeScreen = () =>{
   const navigation = useNavigation();
-  const [text, setText] = useState('');
   const fullText = 'Welcome to securio, the gamified security awareness application. Remember to keep your user credentials to yourself!';
   const [isTextComplete, setIsTextComplete] = useState(false);
-  useEffect(() => {
-    let currentText = '';
-    let index = 0;
-
-    const timer = setInterval(() => {
-      currentText += fullText.charAt(index);
-      index++;
-
-      setText(currentText);
-
-      if (index === fullText.length) {
-        clearInterval(timer);
-        setIsTextComplete(true);
-      }
-    }, 1);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
 
   return(
     <FullHeightContainer>
       <CenteredContainer>
-        <AppText>{text}</AppText>
+        <AnimatedText text={fullText} animationFinishedCallback={() => setIsTextComplete(true)}></AnimatedText>
         {isTextComplete && (
           <AppButton title="Continue" onPress={()=> navigation.navigate('LoginScreen')} />
         )}

@@ -13,7 +13,8 @@ const AppRadioButton = ({ title, label, icon, onPress, isActive }) => {
         <View className="block flex-col items-center">
           {icon ?
             <Icon className={"dark:text-gray-400 w-full "+ (isActive ? "text-blue-600" : "")} name={icon} size={30}></Icon> : null}
-          <Text className={"dark:text-gray-400 w-full text-lg font-semibold "+ (isActive ? "text-blue-600" : "")}>{title}</Text>
+          {title ?
+            <Text className={"dark:text-gray-400 w-full text-lg font-semibold "+ (isActive ? "text-blue-600" : "")}>{title}</Text> : null}
           {label ?
             <Text className={"dark:text-gray-400 w-full "+ (isActive ? "text-blue-600" : "")}>{label}</Text> : null}
         </View>
