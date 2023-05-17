@@ -1,6 +1,6 @@
 const courses = [
   {
-    id: "0",
+    id: "1",
     title: "Phishing",
     cover: "https://picsum.photos/seed/Phishing/100",
     category: "Beginner"

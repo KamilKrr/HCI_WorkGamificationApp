@@ -23,7 +23,7 @@ const WelcomeScreen = () =>{
                 clearInterval(timer);
                 setIsTextComplete(true);
             }
-        }, 50);
+        }, 1);
 
         return () => {
             clearInterval(timer);
