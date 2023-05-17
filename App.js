@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import WelcomeScreen from "./src/sceens/WelcomeScreen";
 import HomeScreen from "./src/sceens/HomeScreen";
+import LoginScreen from "./src/sceens/LoginScreen";
 import TrophiesScreen from "./src/sceens/TrophiesScreen";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {ThemeContextProvider} from "./src/context/ThemeContext";
@@ -25,8 +26,13 @@ export default function App() {
         <NavigationContainer initialRouteName="Welcome" theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
           <Stack.Navigator>
             <Stack.Screen
-                name="Welcome"
+                name="WelcomeScreen"
                 component={WelcomeScreen}
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
+                name="LoginScreen"
+                component={LoginScreen}
                 options={{ headerShown: false }}
             />
             <Stack.Screen

@@ -34,7 +34,7 @@ const WelcomeScreen = () =>{
       <CenteredContainer>
         <AppText>{text}</AppText>
             {isTextComplete && (
-                <AppButton title="Continue" onPress={()=> navigation.navigate('TabNavigator')} />
+                <AppButton title="Continue" onPress={()=> navigation.navigate('LoginScreen')} />
             )}
         </CenteredContainer>
     );
