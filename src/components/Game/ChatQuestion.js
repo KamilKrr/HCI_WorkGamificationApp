@@ -10,7 +10,7 @@ const ChatQuestion = ({ person, text, setQuestionAnimationFinished }) => {
         <View className="flex items-center justify-center h-10 w-10 rounded-full bg-blue-700 flex-shrink-0">
           <Text className={"text-white"}>{person}</Text>
         </View>
-        <View className="relative mr-3 text-sm bg-blue-100 py-2 px-4 shadow rounded-xl">
+        <View className="relative w-10/12 mr-3 text-sm bg-blue-100 py-2 px-4 shadow rounded-xl">
           <AnimatedText text={text} animationFinishedCallback={setQuestionAnimationFinished}/>
         </View>
       </View>

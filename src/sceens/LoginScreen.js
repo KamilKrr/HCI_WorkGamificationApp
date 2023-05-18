@@ -22,7 +22,7 @@ const LoginScreen = () => {
   };
 
   return (
-    <FullHeightContainer>
+    <FullHeightContainer classes={"m-4"}>
       <CenteredContainer>
         <TextInput
           style={styles.input}

@@ -1,9 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
 
-const FullHeightContainer = ({ children }) => {
+const FullHeightContainer = ({ children, classes }) => {
   return (
-    <View className="h-full flex flex-col justify-center">
+    <View className={"h-full flex flex-col justify-center " + classes}>
       {children}
     </View>
   );

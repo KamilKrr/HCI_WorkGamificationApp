@@ -10,7 +10,6 @@ const AnimatedText = ({ text, classes, animationFinishedCallback }) => {
     const timer = setInterval(() => {
       if (index > text.length) {
         clearInterval(timer);
-        console.log("here");
         animationFinishedCallback();
       }
 
@@ -24,7 +23,7 @@ const AnimatedText = ({ text, classes, animationFinishedCallback }) => {
   }, [text]); // Add 'text' as a dependency
 
   return (
-    <Text className={"text-zinc-900 dark:text-white text-base font-medium tracking-tight " + classes}>
+    <Text className={"text-zinc-900 dark:text-white text-base font-medium tracking-tight break-all" + classes}>
       {currentText}
     </Text>
   );

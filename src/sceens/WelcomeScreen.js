@@ -12,7 +12,7 @@ const WelcomeScreen = () =>{
   const [isTextComplete, setIsTextComplete] = useState(false);
 
   return(
-    <FullHeightContainer>
+    <FullHeightContainer classes={"m-4"}>
       <CenteredContainer>
         <AnimatedText text={fullText} animationFinishedCallback={() => setIsTextComplete(true)}></AnimatedText>
         {isTextComplete && (
