@@ -11,7 +11,6 @@ const LoginScreen = () => {
     const [password, setPassword] = useState('');
     const navigation = useNavigation();
     const handleLogin = () => {
-        console.log(email, password);
         if(password != '' || email != ''){
             navigation.navigate('WelcomeScreen')
         }

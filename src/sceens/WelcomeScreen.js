@@ -7,7 +7,7 @@ import CenteredContainer from "../components/CenteredContainer";
 const WelcomeScreen = () =>{
     const navigation = useNavigation();
     const [text, setText] = useState('');
-    const fullText = 'Welcome to securio, the gamified security awareness application. Remember to keep your user credentials to yourself!';
+    const fullText = 'Welcome to securio, the gamified security awareness application. Remember to keep your user credentials to yourself! Be especially wary of login spoofing';
     const [isTextComplete, setIsTextComplete] = useState(false);
     useEffect(() => {
         let currentText = '';
@@ -23,7 +23,7 @@ const WelcomeScreen = () =>{
                 clearInterval(timer);
                 setIsTextComplete(true);
             }
-        }, 50);
+        }, 25);
 
         return () => {
             clearInterval(timer);
