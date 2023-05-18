@@ -1,9 +1,9 @@
 import React from 'react';
 import {View} from 'react-native';
 
-const CenteredContainer = ({ children }) => {
+const CenteredContainer = ({ children, classes }) => {
   return (
-    <View className="p-3 justify-center items-center">
+    <View className={"justify-center items-center " + classes}>
       {children}
     </View>
   );

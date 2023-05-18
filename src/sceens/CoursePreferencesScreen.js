@@ -18,11 +18,11 @@ const CoursePreferencesScreen = ({route, navigation}) => {
     });
   }
   return (
-    <FullHeightContainer>
+    <FullHeightContainer classes={"px-3"}>
       <DurationPicker duration={duration} setDuration={setDuration}/>
       <DifficultyPicker difficulty={difficulty} setDifficulty={setDifficulty}/>
       <CenteredContainer>
-        <AppButton title={"START LEARNING"} classes={"h-14"} onPress={play}></AppButton>
+        <AppButton title={"START SHIFT"} classes={"h-14 m-3"} onPress={play}></AppButton>
       </CenteredContainer>
     </FullHeightContainer>
   )

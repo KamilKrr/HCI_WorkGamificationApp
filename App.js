@@ -14,6 +14,7 @@ import { DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { useColorScheme } from "nativewind";
 import CoursePreferencesScreen from "./src/sceens/CoursePreferencesScreen";
 import PlayScreen from "./src/sceens/PlayScreen";
+import EvalScreen from "./src/sceens/EvalScreen";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -48,6 +49,11 @@ export default function App() {
             <Stack.Screen
               name="Play"
               component={PlayScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Eval"
+              component={EvalScreen}
               options={{ headerShown: false }}
             />
           </Stack.Navigator>
