@@ -13,6 +13,7 @@ const HomeScreen = ({navigation}) => {
       <AppSubText>HCI Aufgabe 3, Gruppe 1</AppSubText>
 
       <CourseList navigation={navigation} heading={"Beginner Topics"} courses={courses.filter(c => c.category === "Beginner")}></CourseList>
+      <CourseList navigation={navigation} heading={"Intermediate Topics"} courses={courses.filter(c => c.category === "Intermediate")}></CourseList>
       <CourseList navigation={navigation} heading={"Advanced Topics"} courses={courses.filter(c => c.category === "Expert")}></CourseList>
     </Container>
 )
