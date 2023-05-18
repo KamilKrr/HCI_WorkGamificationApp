@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {TrophyView} from "../components/TrophyView";
-import { View } from 'react-native';
 import {ScrollView} from "nativewind/dist/preflight";
+import { View, Text, FlatList, Dimensions} from 'react-native';
+import { useSelector, useDispatch } from 'react-redux';
 import {PolarChartComponent} from "../components/PolarChartComponent";
-import { BarChartComponent } from '../components/BarChartComponent';
+import { XpPointsComponent } from '../components/XPPointsComponent';
 import CenteredContainer from "../components/CenteredContainer";
+import AppText from "../components/AppText";
+
 const TrophiesScreen = () => {
+    const courseIds = Array.from(Array(10).keys());
+
+    const renderXpPointsComponent = ({ item }) => (
+        <CenteredContainer>
+            <XpPointsComponent courseId={item} />
+        </CenteredContainer>
+    );
+
     return (
-        <View>
+        <View style={{ flex: 1 }}>
             <CenteredContainer>
-                <ScrollView horizontal={true}>
-                    <PolarChartComponent />
-                    <BarChartComponent />
-                </ScrollView>
+                <AppText>Quiz Performance</AppText>
+                <PolarChartComponent />
             </CenteredContainer>
+            <FlatList
+                data={courseIds}
+                renderItem={renderXpPointsComponent}
+                keyExtractor={(item) => item.toString()}
+                vertical
+                decelerationRate="fast"
+            />
         </View>
     );
 };
