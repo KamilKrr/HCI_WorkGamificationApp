@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, useColorScheme } from 'react-native';
 import { VictoryChart, VictoryPolarAxis, VictoryArea } from 'victory-native';
 import { createSelector } from '@reduxjs/toolkit';
 import { useSelector } from 'react-redux';
@@ -10,8 +10,8 @@ export function PolarChartComponent () {
         (xpValue, courseId) => xpValue[courseId] || 0
     );
     const data = [
-        { subject: 'Passwords',             performance: useSelector(state => selectExperiencePointsByCourseId(state, 0)) },
-        { subject: 'Phishing',              performance: useSelector(state => selectExperiencePointsByCourseId(state, 1)) },
+        { subject: 'Phishing',              performance: useSelector(state => selectExperiencePointsByCourseId(state, 0)) },
+        { subject: 'Passwords',             performance: useSelector(state => selectExperiencePointsByCourseId(state, 1)) },
         { subject: 'Antivirus',             performance: useSelector(state => selectExperiencePointsByCourseId(state, 2)) },
         { subject: 'Firewall',              performance: useSelector(state => selectExperiencePointsByCourseId(state, 3)) },
         { subject: 'VPN',                   performance: useSelector(state => selectExperiencePointsByCourseId(state, 4)) },
@@ -21,18 +21,42 @@ export function PolarChartComponent () {
         { subject: 'Network Security',      performance: useSelector(state => selectExperiencePointsByCourseId(state, 8)) },
         { subject: 'Basics',                performance: useSelector(state => selectExperiencePointsByCourseId(state, 9)) },
     ];
+    const colors = {
+        background: 'black',
+        axis: 'blue',
+        tickLabels: 'blue',
+        data: 'lavender',
+        grid: 'black',
+        axisLabel : 'black',
+    };
+
     const emptyTickFormat = () => '';
     return (
-        <View>
-            <VictoryChart polar >
+        <View >
+            <VictoryChart polar style={{ background: { fill: "gray" } }}>
                 <VictoryPolarAxis
-                    dependentAxis tickFormat={emptyTickFormat}
+                    dependentAxis
+                    tickFormat={emptyTickFormat}
+                    style={{
+                        axis: { stroke: colors.axis },
+                        tickLabels: { fill: colors.tickLabels },
+                        grid: {stroke: colors.grid},
+                        axisLabel: { fill: colors.axisLabel },
+                    }}
                 />
-                <VictoryPolarAxis />
+                <VictoryPolarAxis
+                    style={{
+                        axis: { stroke: colors.axis },
+                        tickLabels: { fill: colors.tickLabels },
+                    }}
+                />
                 <VictoryArea
                     data={data}
                     x="subject"
                     y="performance"
+                    style={{
+                        data: { fill: colors.data, stroke: colors.data },
+                    }}
                 />
             </VictoryChart>
         </View>

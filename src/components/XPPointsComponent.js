@@ -37,25 +37,15 @@ export function XpPointsComponent({ courseId }){
   return (
     <View >
       <CenteredContainer>
-        <Text style={styles.label}>Course: {course}</Text>
-        <Text style={styles.label}>Experience gained:</Text>
-        <Text style={styles.xpText}>{xpPoints}</Text>
-        <Text style={styles.label}>{levelText}</Text>
-        <Text style={styles.label}>--------------------------</Text>
+        <AppText>Course: {course}</AppText>
+        <AppText>Experience gained:</AppText>
+        <AppText>{xpPoints}</AppText>
+        <AppText>{levelText}</AppText>
+        <AppText>--------------------------</AppText>
       </CenteredContainer>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  xpText: {
-    marginTop: 20,
-    fontSize: 50,
-    fontWeight: 'bold',
-  },
-  label: {
-    fontSize: 25,
-    marginTop: 20,
-  },
-});
+
 
