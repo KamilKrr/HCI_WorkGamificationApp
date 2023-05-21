@@ -8,9 +8,9 @@ const QA = ({ question, sendAnswer }) => {
 
   return (
     <View>
-      <ChatQuestion person={"K"} text={question['text']} setQuestionAnimationFinished={() => setQuestionAnimationFinished(true)}></ChatQuestion>
+      <ChatQuestion person={"Q"} text={question['text']} setQuestionAnimationFinished={() => setQuestionAnimationFinished(true)}></ChatQuestion>
       {questionAnimationFinished ?
-      <ChatAnswer sendAnswer={sendAnswer} person={"K"} answer={question['answer']} options={question['options']}></ChatAnswer> : null}
+      <ChatAnswer sendAnswer={sendAnswer} person={"A"} answer={question['answer']} options={question['options']}></ChatAnswer> : null}
     </View>
   );
 };
