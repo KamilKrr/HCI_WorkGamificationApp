@@ -2,7 +2,7 @@ const courses = [
   {
     id: "0",
     title: "Phishing",
-    cover: "https://picsum.photos/seed/Phishing/100",
+    cover: require('./covers/phishing.png'),
     category: "Beginner",
     questions: [
       {
@@ -60,7 +60,7 @@ const courses = [
   {
     id: "1",
     title: "Passwords",
-    cover: "https://picsum.photos/seed/Passwords/100",
+    cover: require('./covers/passwords.jpg'),
     category: "Beginner",
     questions: [
       {
@@ -118,7 +118,7 @@ const courses = [
   {
     id: "2",
     title: "Antivirus",
-    cover: "https://picsum.photos/seed/Antivirus/100",
+    cover: require('./covers/antivirus.jpg'),
     category: "Intermediate",
     questions: [
       {
@@ -226,7 +226,7 @@ const courses = [
   {
     id: "3",
     title: "Firewalls",
-    cover: "https://picsum.photos/seed/Firewalls/100",
+    cover: require('./covers/firewalls.jpg'),
     category: "Expert",
     questions: [
       {
@@ -324,7 +324,7 @@ const courses = [
   {
     id: "4",
     title: "VPN",
-    cover: "https://picsum.photos/seed/VPN/100",
+    cover: require('./covers/vpn.jpg'),
     category: "Expert",
     questions: [
       {
@@ -412,7 +412,7 @@ const courses = [
   {
     id: "5",
     title: "Social Engineering",
-    cover: "https://picsum.photos/seed/Social Engineering/100",
+    cover: require('./covers/social_engineering.png'),
     category: "Expert",
     questions: [
       {
@@ -500,7 +500,7 @@ const courses = [
   {
     id: "6",
     title: "Two-Factor Auth",
-    cover: "https://picsum.photos/seed/Two-Factor-Authentication/100",
+    cover: require('./covers/2fa.jpg'),
     category: "Intermediate",
     questions: [
       {
@@ -578,7 +578,7 @@ const courses = [
   {
     id: "7",
     title: "Data Encryption",
-    cover: "https://picsum.photos/seed/Data-Encryption/100",
+    cover: require('./covers/encryption.jpg'),
     category: "Intermediate",
     questions: [
       {
@@ -656,7 +656,7 @@ const courses = [
   {
     id: "8",
     title: "Network Security",
-    cover: "https://picsum.photos/seed/Network-Security/100",
+    cover: require('./covers/networks.jpg'),
     category: "Intermediate",
     questions: [
       {
@@ -734,7 +734,7 @@ const courses = [
   {
     id: "9",
     title: "Basics",
-    cover: "https://picsum.photos/seed/Basics/100",
+    cover: require('./covers/basics.jpg'),
     category: "Beginner",
     questions: [
       {
