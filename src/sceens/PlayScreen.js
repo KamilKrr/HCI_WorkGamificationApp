@@ -32,8 +32,8 @@ const PlayScreen = ({route, navigation}) => {
 
     if (timeRemaining <= 0 || questionID >= courses[courseID]['questions'].length-1) {
       handleGameEnded(updatedSessionXP);
-    } else if((duration === 1 && questionID >= 1) || (duration === 5 && questionID >= 5)) {
-      //end game after 1 or 5 questions depending on duration chosen
+    } else if(duration === 5 && questionID >= 4) {
+      //end game after 5 questions depending on duration chosen
       handleGameEnded(updatedSessionXP);
     } else {
       setQuestionID((previousQuestionID) => previousQuestionID + 1);

@@ -46,7 +46,7 @@ const EvalScreen = ({route, navigation}) => {
                 <AppText classes={"font-bold text-blue-500 text-xl"}> {allQuestions} {allQuestions === 1 ? "question, " : "questions, "}</AppText>
                 and you got
                 <AppText classes={"font-bold text-green-500 text-xl"}> {correctAnswers} </AppText>
-                {correctAnswers === 0 ? 'right!' : 'of them right!'}
+                {correctAnswers <= 1  ? 'right!' : 'of them right!'}
             </AppText>
             <AppText>
                 Earned XP:
