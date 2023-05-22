@@ -32,6 +32,9 @@ const PlayScreen = ({route, navigation}) => {
 
     if (timeRemaining <= 0 || questionID >= courses[courseID]['questions'].length-1) {
       handleGameEnded(updatedSessionXP);
+    } else if((duration === 1 && questionID >= 1) || (duration === 5 && questionID >= 5)) {
+      //end game after 1 or 5 questions depending on duration chosen
+      handleGameEnded(updatedSessionXP);
     } else {
       setQuestionID((previousQuestionID) => previousQuestionID + 1);
     }
@@ -48,7 +51,7 @@ const PlayScreen = ({route, navigation}) => {
         correctAnswers: correctAnswers.current,
         wrongAnswers: wrongAnswers.current,
       });
-    }, 3000);
+    }, 1500);
   };
 
   useEffect(() => {
@@ -61,6 +64,7 @@ const PlayScreen = ({route, navigation}) => {
         return previousTimeRemaining - 1;
       });
     }, 60000);
+
 
     return () => {
       clearInterval(timer);

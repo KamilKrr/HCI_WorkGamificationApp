@@ -8,7 +8,7 @@ const CoursePreferencesScreen = ({route, navigation}) => {
   const { courseID } = route.params;
 
   const [difficulty, setDifficulty] = useState(0);
-  const [duration, setDuration] = useState(1);
+  const [duration, setDuration] = useState(5);
 
   const play = () => {
     navigation.navigate('Play', {
