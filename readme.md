@@ -26,3 +26,4 @@ Weitere Anmerkungen:
 - Dark Theme in den Einstellungen aktivieren
 - Spiellänge zum Testen auf 1 oder 5 Fragen einstellen sonst dauert es zu lange
 - Easy/Medium/Expert beinflussen die erhaltene Menge an XP 
+- APK URL: https://expo.dev/artifacts/eas/fL5BsLQw61JHANjAnKnqq.apk
