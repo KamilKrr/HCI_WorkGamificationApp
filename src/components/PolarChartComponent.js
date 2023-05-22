@@ -7,7 +7,7 @@ export function PolarChartComponent () {
     const selectExperiencePointsByCourseId = createSelector(
         state => state.xp.value,
         (_, courseId) => courseId,
-        (xpValue, courseId) => xpValue[courseId] || 0
+        (xpValue, courseId) => xpValue[courseId] > 0 ? xpValue[courseId] : 0 || 0
     );
     const data = [
         { subject: 'Phishing',              performance: useSelector(state => selectExperiencePointsByCourseId(state, 0)) },
