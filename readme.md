@@ -1,7 +1,7 @@
 ## Readme - M3
 
 * Gruppe:	1
-* Team-Nr.:
+* Team-Nr.: 1
 * Projektthema: Work Gamification
 
 ### Implementierung
