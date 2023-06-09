@@ -6,6 +6,7 @@ import requireAssets from "../../assets/requireAssets";
 import CircularProgress from 'react-native-circular-progress-indicator';
 import {Text, View} from "react-native";
 import AppButtonEvalScreen from "../components/AppButtonEvalScreen";
+import {ScrollView} from "nativewind/dist/preflight";
 
 
 const EvalScreen = ({route, navigation}) => {
@@ -28,7 +29,7 @@ const EvalScreen = ({route, navigation}) => {
     }
 
     const exitEvalScreen = () => {
-        navigation.navigate('TabNavigator');
+        navigation.navigate('Courses');
     }
     const restartGame = () => {
         navigation.navigate('CoursePreferences', {
@@ -39,23 +40,23 @@ const EvalScreen = ({route, navigation}) => {
 
     const evalInfo = (
         <CenteredContainer>
-            <View className={"mt-3"}>{medalAward}</View>
-            {praiseMessage}
-            <AppText>
-                You've attempted
-                <AppText classes={"font-bold text-blue-500 text-xl"}> {allQuestions} {allQuestions === 1 ? "question, " : "questions, "}</AppText>
-                and you got
-                <AppText classes={"font-bold text-green-500 text-xl"}> {correctAnswers} </AppText>
-                {correctAnswers <= 1  ? 'right!' : 'of them right!'}
-            </AppText>
-            <AppText>
-                Earned XP:
-            </AppText>
-            <View className={"m-6 mt-2 inline-flex items-center justify-center px-4 py-2 rounded-xl " + (sessionXP < 0 ? 'bg-red-200' : 'bg-green-200')}>
-                <Text className={"text-3xl font-bold leading-sm uppercase " + (sessionXP < 0 ? 'text-red-700' : 'text-green-700')}>
-                    xp {sessionXP > 0 ? '+' : ''}{sessionXP}
-                </Text>
-            </View>
+          <View className={"mt-3"}>{medalAward}</View>
+          {praiseMessage}
+          <AppText>
+            You've attempted
+            <AppText classes={"font-bold text-blue-500 text-xl"}> {allQuestions} {allQuestions === 1 ? "question, " : "questions, "}</AppText>
+            and you got
+            <AppText classes={"font-bold text-green-500 text-xl"}> {correctAnswers} </AppText>
+            {correctAnswers <= 1  ? 'right!' : 'of them right!'}
+          </AppText>
+          <AppText>
+            Earned XP:
+          </AppText>
+          <View className={"m-6 mt-2 inline-flex items-center justify-center px-4 py-2 rounded-xl " + (sessionXP < 0 ? 'bg-red-200' : 'bg-green-200')}>
+            <Text className={"text-3xl font-bold leading-sm uppercase " + (sessionXP < 0 ? 'text-red-700' : 'text-green-700')}>
+              xp {sessionXP > 0 ? '+' : ''}{sessionXP}
+            </Text>
+          </View>
         </CenteredContainer>
     );
 

@@ -16,7 +16,7 @@ const LoginScreen = () => {
       navigation.navigate('WelcomeScreen')
     }
     else{
-      navigation.navigate('TabNavigator')
+      navigation.navigate('Courses')
     }
   };
 

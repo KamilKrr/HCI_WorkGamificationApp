@@ -8,7 +8,7 @@ const DurationPicker = ({ duration, setDuration }) => {
 
   return (
     <CenteredContainer>
-      <Text className="mt-3 mb-2 text-lg text-gray-900 dark:text-white font-bold">How much time do you have?</Text>
+      <Text className="mb-2 text-lg text-gray-900 dark:text-white font-bold">How much time do you have?</Text>
       <View className="grid w-full gap-3 md:grid-cols-2">
         <View>
           <AppRadioButton title={"1 Question"} label={"Pass the elevator ride"} isActive={duration === 0} onPress={() => setDuration(0)}/>

@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
-const AppRadioButton = ({ title, label, icon, onPress, isActive, classes }) => {
+const AppRadioButton = ({ title, label, pill, icon, onPress, isActive, classes }) => {
   const activeClasses = "text-blue-500 border-blue-600";
   const inactiveClasses = "dark:text-white text-gray-500";
   return (
@@ -17,6 +17,11 @@ const AppRadioButton = ({ title, label, icon, onPress, isActive, classes }) => {
             <Text className={"dark:text-gray-400 w-full text-lg font-semibold "+ (isActive ? "text-blue-600" : "")}>{title}</Text> : null}
           {label ?
             <Text className={"break-all dark:text-gray-400 "+ (isActive ? "text-blue-600" : "") + " " + classes}>{label}</Text> : null}
+          {pill ?
+            <View className={"inline-flex items-center justify-center px-3 py-1 rounded-full bg-green-200"}>
+              <Text className={"text-xs font-bold leading-sm text-green-700"}>{pill}</Text>
+            </View> : null}
+
         </View>
       </View>
     </TouchableOpacity>

@@ -16,6 +16,7 @@ import { useColorScheme } from "nativewind";
 import CoursePreferencesScreen from "./src/sceens/CoursePreferencesScreen";
 import PlayScreen from "./src/sceens/PlayScreen";
 import EvalScreen from "./src/sceens/EvalScreen";
+import courses from "./assets/courses";
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -38,14 +39,14 @@ export default function App() {
                 options={{ headerShown: false }}
             />
             <Stack.Screen
-              name="TabNavigator"
+              name="Courses"
               component={TabNavigator}
               options={{ headerShown: false }}
             />
             <Stack.Screen
               name="CoursePreferences"
               component={CoursePreferencesScreen}
-              options={{ headerShown: false }}
+              options={({ route }) => ({ title: courses[route.params.courseID].title })}
             />
             <Stack.Screen
               name="Play"
