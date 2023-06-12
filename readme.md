@@ -1,4 +1,4 @@
-## Readme - M3
+## Readme - M4
 
 * Gruppe:	1
 * Team-Nr.: 1
@@ -26,4 +26,6 @@ Weitere Anmerkungen:
 - Dark Theme in den Einstellungen aktivieren
 - Spiellänge zum Testen auf 1 oder 5 Fragen einstellen sonst dauert es zu lange
 - Easy/Medium/Expert beinflussen die erhaltene Menge an XP 
-- APK URL: https://expo.dev/artifacts/eas/fL5BsLQw61JHANjAnKnqq.apk
+- APK URL: https://expo.dev/artifacts/eas/pxCjZBH6pqdDaFH5gQ4tCr.apk
+
+Die M4 Abgabe-Dokumente befinden sich im Root Ordner (3 Dokumente)

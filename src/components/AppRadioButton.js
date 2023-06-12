@@ -14,7 +14,7 @@ const AppRadioButton = ({ title, label, pill, icon, onPress, isActive, classes }
           {icon ?
             <Icon className={"dark:text-gray-400 w-full "+ (isActive ? "text-blue-600" : "")} name={icon} size={30}></Icon> : null}
           {title ?
-            <Text className={"dark:text-gray-400 w-full text-lg font-semibold "+ (isActive ? "text-blue-600" : "")}>{title}</Text> : null}
+            <Text className={"dark:text-gray-400 w-full text-base font-semibold "+ (isActive ? "text-blue-600" : "")}>{title}</Text> : null}
           {label ?
             <Text className={"break-all dark:text-gray-400 "+ (isActive ? "text-blue-600" : "") + " " + classes}>{label}</Text> : null}
           {pill ?
